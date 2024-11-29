@@ -1,0 +1,75 @@
+Result {
+  _stack: '\n' +
+    '    at captureStacktrace (C:\\Users\\dcamac36\\Documents\\CCS 5220\\neo4j\\node_modules\\neo4j-driver-core\\lib\\result.js:624:17)\n' +
+    '    at new Result (C:\\Users\\dcamac36\\Documents\\CCS 5220\\neo4j\\node_modules\\neo4j-driver-core\\lib\\result.js:112:23)\n' +
+    '    at Session._run (C:\\Users\\dcamac36\\Documents\\CCS 5220\\neo4j\\node_modules\\neo4j-driver-core\\lib\\session.js:215:16)\n' +
+    '    at Session.run (C:\\Users\\dcamac36\\Documents\\CCS 5220\\neo4j\\node_modules\\neo4j-driver-core\\lib\\session.js:180:27)\n' +
+    '    at C:\\Users\\dcamac36\\Documents\\CCS 5220\\neo4j\\app.js:23:28\n' +
+    '    at Object.<anonymous> (C:\\Users\\dcamac36\\Documents\\CCS 5220\\neo4j\\app.js:48:3)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1469:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1288:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:1104:12)',
+  _streamObserverPromise: Promise { <pending> },
+  _p: null,
+  _query: 'MATCH (m:Movie {title:$movie})<-[:RATED]-(u:User)-[:RATED]->(rec:Movie)\n' +
+    '    RETURN distinct rec.title AS recommendation LIMIT 20',
+  _parameters: { movie: 'Crimson Tide' },
+  _connectionHolder: ConnectionHolder {
+    _mode: 'WRITE',
+    _closed: false,
+    _database: 'neo4j',
+    _bookmarks: Bookmarks { _values: [] },
+    _connectionProvider: DirectConnectionProvider {
+      _id: 0,
+      _config: [Object],
+      _log: [NoOpLogger],
+      _clientCertificateHolder: [ClientCertificateHolder],
+      _authenticationProvider: [AuthenticationProvider],
+      _livenessCheckProvider: [LivenessCheckProvider],
+      _userAgent: 'neo4j-javascript/5.26.0',
+      _boltAgent: [Object],
+      _createChannelConnection: [Function (anonymous)],
+      _connectionPool: [Pool],
+      _openConnections: {},
+      _address: [ServerAddress]
+    },
+    _impersonatedUser: undefined,
+    _referenceCount: 1,
+    _connectionPromise: Promise { <pending> },
+    _onDatabaseNameResolved: [Function: bound ],
+    _auth: undefined,
+    _log: NoOpLogger {
+      _level: 'info',
+      _loggerFunction: [Function (anonymous)]
+    },
+    _logError: [Function: bound ],
+    _getConnectionAcquistionBookmarks: [Function: bound ]
+  },
+  _keys: null,
+  _summary: null,
+  _error: null,
+  _watermarks: { high: 700, low: 300 },
+  [Symbol(Symbol.toStringTag)]: 'Result'
+}
+
+
+//==========================================================
+    // const query =
+    // `MATCH (m:Movie {title:$movie})<-[:RATED]-(u:User)-[:RATED]->(rec:Movie)
+    // RETURN distinct rec.title AS recommendation LIMIT 20`;
+
+    // const params = {"movie": "Crimson Tide"};
+
+    // const session = driver.session({database:"neo4j"});
+
+    // const result = session.run(query, params);
+    
+    // console.log(result);
+    // // result.records.forEach((record) => {
+    // //     console.log(record.get('recommendation'));
+    // // });
+
+    // session.close();
+    // driver.close();
+    //==========================================================

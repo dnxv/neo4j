@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "neo4j-driver": "^5.26.0"
+  },
+  "name": "neo4j",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David C",
+  "license": "ISC",
+  "description": ""
+}
