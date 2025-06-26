@@ -31,3 +31,16 @@ npm install
     - node 1stQuery.js
     - node 2ndQuery.js
 ```
+
+Links
+```
+https://graphacademy.neo4j.com/categories/
+
+https://neo4j.com/labs/apoc/4.1/virtual/
+
+https://neo4j.com/product/graph-data-science/
+
+ideas:
+- neo4j Dynamic relationship generation with JavaScript computed properties
+- Neo4j's Native Graph Data Science
+```
